@@ -1,10 +1,6 @@
 .done {
     text-decoration: line-through;
 }
-.times {
-    float:right;
-    margin-right: 10px;
-  }
 .task-item {
     width: 200px;
 }
