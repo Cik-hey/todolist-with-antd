@@ -26,13 +26,15 @@ const initTodos = [
             done: false,
           };
           state.push(todo)
-          // console.log(current(state));
         },
         deleteTodo: (state, action) => {
+            const id = action.payload;
+            return state.filter((todo) => todo.id !== id);
             //delete the item with the id in action.payload in the array
-        }
+        },
       },
   });
 
   export const { addTodo } = todoSlice.actions;
+  export const { deleteTodo } = todoSlice.actions;
   export default todoSlice;

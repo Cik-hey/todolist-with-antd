@@ -11,8 +11,8 @@ const TodoList = () => {
 
     return (
     <>
-    <TodoGroup todoList = {todoList} />
-    <TodoGenerator />
+        <TodoGroup todoList = {todoList} />
+        <TodoGenerator />
     </>
     )
   };
