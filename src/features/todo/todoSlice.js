@@ -32,9 +32,19 @@ const initTodos = [
             return state.filter((todo) => todo.id !== id);
             //delete the item with the id in action.payload in the array
         },
+        toggleTodo: (state, action) => {
+            const id = action.payload;
+            return state.map((todo) => todo.id === id ? {...todo, done: !todo.done} : todo);
+            // return state.map((todo) => {
+            //     const updatedTodo = { ...todo, done: !todo.done };
+            //     return updatedTodo;
+            // })
+            // return todo;
+        },
       },
   });
 
   export const { addTodo } = todoSlice.actions;
   export const { deleteTodo } = todoSlice.actions;
+  export const { toggleTodo } = todoSlice.actions;
   export default todoSlice;
