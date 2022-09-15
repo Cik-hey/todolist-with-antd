@@ -1,11 +1,21 @@
-import { useSelector } from "react-redux";
+import { useSelector,useDispatch } from "react-redux";
+import { useEffect } from "react";
+import { getTodoList } from "../../api/todos";
+import { initData } from "./todoSlice";
 import TodoGenerator from "./TodoGenerator";
 import TodoGroup from "./TodoGroup";
 import "./TodoItem.css";
 
 const TodoList = () => {
+    const dispatch = useDispatch();
     const todoList = useSelector((state) => state.todoList);
-    console.log(todoList);
+
+    useEffect(() => {
+        getTodoList().then((res) => {
+         dispatch(initData(res.data))
+        })
+     }, [dispatch])
+
     return (
     <>  
         <div class="container">

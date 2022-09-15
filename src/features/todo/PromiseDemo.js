@@ -9,9 +9,9 @@ const PromiseDemo = () => {
         }
      });
      promise.then(function(result) {
-        console.log(result); // "Promise resolved successfully"
+        console.log(result);
      }, err => {
-        console.log(err); // Error: "Promise rejected"
+        console.log(err);
      });
     }
 export default PromiseDemo;
