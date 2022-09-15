@@ -19,7 +19,6 @@ const initTodos = [
       reducers: {
         addTodo: (state, action) => {
           const todoText = action.payload;
-          // console.log(action);
           const todo = {
             id: Date.now(),
             text: todoText,
@@ -30,16 +29,10 @@ const initTodos = [
         deleteTodo: (state, action) => {
             const id = action.payload;
             return state.filter((todo) => todo.id !== id);
-            //delete the item with the id in action.payload in the array
         },
         toggleTodo: (state, action) => {
             const id = action.payload;
             return state.map((todo) => todo.id === id ? {...todo, done: !todo.done} : todo);
-            // return state.map((todo) => {
-            //     const updatedTodo = { ...todo, done: !todo.done };
-            //     return updatedTodo;
-            // })
-            // return todo;
         },
       },
   });

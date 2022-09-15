@@ -12,7 +12,6 @@ const TodoGenerator = () => {
         setTodoText(event.target.value);
     };
     const onAdd = () => {
-        // console.log("save the data to global store");
         dispatch(addTodo(todoText));
         setTodoText("");
     }

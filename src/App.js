@@ -5,7 +5,7 @@ import PromiseDemo from './features/todo/PromiseDemo';
 function App() {
   return (
     <div className="App">
-      {/* <TodoList /> */}
+      <TodoList />
       <PromiseDemo />
     </div>
   );
