@@ -12,6 +12,11 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<BasicLayout />}>
+            {/* 
+            <BasicLayout>
+            / => <Outlet /> => <TodoList />
+            /about => <Outlet /> => <AboutPage />
+            */}
             <Route path="/" element={<TodoList />} />
             <Route path="/about" element={<AboutPage />} />
             <Route path="/help" element={<HelpPage />} />

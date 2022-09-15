@@ -28,10 +28,12 @@ const TodoItem = (props) =>  {
             console.log(error);}
       );
 
-  return <div className="task-item" onClick={onToggle}>
+  return (
+    <div className="task-item" onClick={onToggle}>
     <span className={todo.done ? "done" : ""}>{todo.text}</span>
     <span className="times" onClick={onDelete}>&times;</span>
     </div>
+    )
 };
 
 export default TodoItem

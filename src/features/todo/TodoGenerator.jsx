@@ -17,7 +17,8 @@ const TodoGenerator = () => {
     }
   return (
     <div>
-      <input type="text" placeholder="input your todo" value={todoText} onChange={onTodoTextChange} />
+      <label for="todo">To-Do:</label><br/>
+      <input type="text" placeholder="input your todo" name="" value={todoText} onChange={onTodoTextChange} />
       <button onClick={onAdd}>Add</button>
 
     </div>
