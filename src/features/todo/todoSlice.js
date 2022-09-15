@@ -37,8 +37,12 @@ const initTodos = [
             const id = action.payload;
             return state.map((todo) => todo.id === id ? {...todo, done: !todo.done} : todo);
         },
+        updateTodo: (state, action) => {
+          const updateItem = action.payload;
+          return state.map((todo) => todo.id === updateItem.id ? {...todo, text: updateItem.text} : todo);
+      },
       },
   });
 
-  export const { addTodo, deleteTodo, toggleTodo, initData } = todoSlice.actions;
+  export const { addTodo, deleteTodo, toggleTodo, updateTodo, initData } = todoSlice.actions;
   export default todoSlice;

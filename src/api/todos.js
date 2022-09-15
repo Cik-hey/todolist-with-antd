@@ -21,3 +21,7 @@ export function deleteTodoItem(id) {
 export function toggleTodoItem(id, done) {
     return api.put(`/todos/${id}`, { done: done });
 }
+
+export function updateTodoItem(id, text) {
+    return api.put(`/todos/${id}`, { text: text });
+}
