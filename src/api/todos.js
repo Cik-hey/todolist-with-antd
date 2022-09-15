@@ -13,3 +13,11 @@ export function getTodoList(){
 export function addTodoItem(data) {
     return api.post("/todos", data);
 }
+
+export function deleteTodoItem(id) {
+    return api.delete(`/todos/${id}`);
+}
+
+export function toggleTodoItem(id, done) {
+    return api.put(`/todos/${id}`, { done: done });
+}

@@ -1,10 +1,11 @@
-import './index.css';
 import App from './App';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { configureStore, createSlice, current } from '@reduxjs/toolkit';
 import store from "./app/store";
+import 'antd/dist/antd.css';
+import './index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
